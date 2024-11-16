@@ -1,4 +1,4 @@
-package com.example.movies_app_jc
+package com.example.movies_app_jc.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,8 +11,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.movies_app_jc.ui.theme.Movies_App_JCTheme
+import com.example.movies_app_jc.presentation.ui.theme.Movies_App_JCTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
