@@ -1,4 +1,4 @@
-package com.example.movies_app_jc.presentation.screens
+package com.example.movies_app_jc.presentation.screens.homescreen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -43,7 +43,7 @@ fun HomeScreen(
     navController: NavHostController
 ) {
     val movieListViewModel = hiltViewModel<MovieListViewModel>()
-    val movieState = movieListViewModel.movieListState.collectAsState().value
+    val movieListState = movieListViewModel.movieListState.collectAsState().value
     val bottomNavController = rememberNavController()
 
     Scaffold(
@@ -57,7 +57,7 @@ fun HomeScreen(
             TopAppBar(
                 title = {
                     Text(
-                        text = if (movieState.isCurrentPopularScreen)
+                        text = if (movieListState.isCurrentPopularScreen)
                             stringResource(R.string.popular_movies)
                         else
                             stringResource(R.string.upcoming_movies),
@@ -82,10 +82,18 @@ fun HomeScreen(
                 startDestination = Screen.PopularMovieList.rout
             ) {
                 composable(Screen.PopularMovieList.rout) {
-//                    PopularMovieList()
+                    PopularMovieList(
+                        navController = navController,
+                        movieListState = movieListState,
+                        onEvent = movieListViewModel::onEvent
+                    )
                 }
-                composable(Screen.PopularMovieList.rout) {
-//                    PopularMovieList()
+                composable(Screen.UpcomingMovieList.rout) {
+                    UpcomingMovieList(
+                        navController = navController,
+                        movieListState = movieListState,
+                        onEvent = movieListViewModel::onEvent
+                    )
                 }
             }
         }

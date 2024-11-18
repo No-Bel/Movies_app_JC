@@ -11,14 +11,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.example.movies_app_jc.presentation.screens.homescreen.HomeScreen
 import com.example.movies_app_jc.presentation.ui.theme.Movies_App_JCTheme
-import com.example.movies_app_jc.presentation.viewmodel.MovieListViewModel
 import com.example.movies_app_jc.util.Screen
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import dagger.hilt.android.AndroidEntryPoint
