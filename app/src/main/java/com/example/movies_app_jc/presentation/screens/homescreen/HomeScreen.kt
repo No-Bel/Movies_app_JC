@@ -34,7 +34,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.movies_app_jc.R
 import com.example.movies_app_jc.presentation.event.MovieListUiEvent
 import com.example.movies_app_jc.presentation.model.BottomItem
-import com.example.movies_app_jc.presentation.viewmodel.MovieListViewModel
+import com.example.movies_app_jc.presentation.screens.homescreen.viewmodel.MovieListViewModel
 import com.example.movies_app_jc.util.Screen
 
 @OptIn(ExperimentalMaterial3Api::class)

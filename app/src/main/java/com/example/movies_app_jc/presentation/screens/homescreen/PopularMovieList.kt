@@ -14,8 +14,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.example.movies_app_jc.presentation.event.MovieListUiEvent
-import com.example.movies_app_jc.presentation.screens.item.MovieItem
-import com.example.movies_app_jc.presentation.state.MovieListState
+import com.example.movies_app_jc.presentation.screens.homescreen.item.MovieItem
+import com.example.movies_app_jc.presentation.screens.homescreen.state.MovieListState
 import com.example.movies_app_jc.util.Category
 
 @Composable

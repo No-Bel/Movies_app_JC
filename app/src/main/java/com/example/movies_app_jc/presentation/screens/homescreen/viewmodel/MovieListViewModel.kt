@@ -1,10 +1,10 @@
-package com.example.movies_app_jc.presentation.viewmodel
+package com.example.movies_app_jc.presentation.screens.homescreen.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.movies_app_jc.data.repository.MovieRepositoryImpl
+import com.example.movies_app_jc.domain.repository.MovieRepository
 import com.example.movies_app_jc.presentation.event.MovieListUiEvent
-import com.example.movies_app_jc.presentation.state.MovieListState
+import com.example.movies_app_jc.presentation.screens.homescreen.state.MovieListState
 import com.example.movies_app_jc.util.Category
 import com.example.movies_app_jc.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -16,7 +16,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MovieListViewModel @Inject constructor(
-    private val movieRepository: MovieRepositoryImpl
+    private val movieRepository: MovieRepository
 ) : ViewModel() {
 
     private var _movieListState = MutableStateFlow(MovieListState())

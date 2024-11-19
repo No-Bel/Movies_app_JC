@@ -1,4 +1,4 @@
-package com.example.movies_app_jc.presentation.screens.item
+package com.example.movies_app_jc.presentation.screens.homescreen.item
 
 import android.util.Log
 import androidx.compose.foundation.Image
@@ -55,7 +55,7 @@ fun MovieItem(
 
     val imageState = rememberAsyncImagePainter(
         model = ImageRequest.Builder(LocalContext.current)
-            .data(IMAGE_BASE_URL + movie.backdrop_path)
+            .data(IMAGE_BASE_URL + movie.poster_path)
             .size(Size.ORIGINAL)
             .build()
     ).state
@@ -120,7 +120,7 @@ fun MovieItem(
         Spacer(modifier = Modifier.height(6.dp))
 
         Text(
-            modifier = Modifier.padding(start = 26.dp, end = 8.dp),
+            modifier = Modifier.padding(start = 16.dp, end = 8.dp),
             text = movie.title,
             color = Color.White,
             fontSize = 15.sp,
