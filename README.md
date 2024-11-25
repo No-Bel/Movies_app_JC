@@ -1,4 +1,4 @@
-Room, Dager-Hilt, Retrofit, Flow, Kotlin Coroutine
+Jetpack Compose, Room, Dager-Hilt, Retrofit, Flow, Kotlin Coroutine
 
 <img width="356" alt="Screenshot 2024-11-20 at 12 27 01" src="https://github.com/user-attachments/assets/5a7606fb-6470-4c75-9fcf-54671bd516b9">
 
